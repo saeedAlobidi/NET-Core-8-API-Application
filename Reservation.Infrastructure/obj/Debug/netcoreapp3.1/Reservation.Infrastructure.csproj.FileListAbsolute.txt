@@ -1,0 +1,17 @@
+H:\My work\Reservation Project\Code\ReservationProject\Reservation.Infrastructure\bin\Debug\netcoreapp3.1\Reservation.Infrastructure.deps.json
+H:\My work\Reservation Project\Code\ReservationProject\Reservation.Infrastructure\bin\Debug\netcoreapp3.1\Reservation.Infrastructure.dll
+H:\My work\Reservation Project\Code\ReservationProject\Reservation.Infrastructure\obj\Debug\netcoreapp3.1\Reservation.Infrastructure.AssemblyInfoInputs.cache
+H:\My work\Reservation Project\Code\ReservationProject\Reservation.Infrastructure\obj\Debug\netcoreapp3.1\Reservation.Infrastructure.AssemblyInfo.cs
+H:\My work\Reservation Project\Code\ReservationProject\Reservation.Infrastructure\obj\Debug\netcoreapp3.1\Reservation.Infrastructure.csprojAssemblyReference.cache
+H:\My work\Reservation Project\Code\ReservationProject\Reservation.Infrastructure\bin\Debug\netcoreapp3.1\Reservation.Infrastructure.pdb
+H:\My work\Reservation Project\Code\ReservationProject\Reservation.Infrastructure\bin\Debug\netcoreapp3.1\ReservationProject.Application.dll
+H:\My work\Reservation Project\Code\ReservationProject\Reservation.Infrastructure\bin\Debug\netcoreapp3.1\ReservationProject.Domain.dll
+H:\My work\Reservation Project\Code\ReservationProject\Reservation.Infrastructure\bin\Debug\netcoreapp3.1\ReservationProject.Application.pdb
+H:\My work\Reservation Project\Code\ReservationProject\Reservation.Infrastructure\bin\Debug\netcoreapp3.1\ReservationProject.Domain.pdb
+H:\My work\Reservation Project\Code\ReservationProject\Reservation.Infrastructure\obj\Debug\netcoreapp3.1\Reservation.Infrastructure.csproj.CopyComplete
+H:\My work\Reservation Project\Code\ReservationProject\Reservation.Infrastructure\obj\Debug\netcoreapp3.1\Reservation.Infrastructure.dll
+H:\My work\Reservation Project\Code\ReservationProject\Reservation.Infrastructure\obj\Debug\netcoreapp3.1\Reservation.Infrastructure.pdb
+H:\My work\Reservation Project\Code\ReservationProject\Reservation.Infrastructure\bin\Debug\netcoreapp3.1\Reservation.Infrastructure.runtimeconfig.json
+H:\My work\Reservation Project\Code\ReservationProject\Reservation.Infrastructure\bin\Debug\netcoreapp3.1\Reservation.Infrastructure.runtimeconfig.dev.json
+H:\My work\Reservation Project\Code\ReservationProject\Reservation.Infrastructure\obj\Debug\netcoreapp3.1\Reservation.Infrastructure.csproj.CoreCompileInputs.cache
+H:\My work\Reservation Project\Code\ReservationProject\Reservation.Infrastructure\obj\Debug\netcoreapp3.1\Reservation.Infrastructure.genruntimeconfig.cache

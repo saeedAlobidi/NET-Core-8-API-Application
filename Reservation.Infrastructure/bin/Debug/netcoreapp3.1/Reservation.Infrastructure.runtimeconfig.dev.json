@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\eiad\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\eiad\\.nuget\\packages"
+    ]
+  }
+}

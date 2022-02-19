@@ -1,0 +1,48 @@
+H:\My work\Reservation Project\Code\ReservationProject\ReservationProject.Application\bin\Debug\netcoreapp3.1\ReservationProject.Application.deps.json
+H:\My work\Reservation Project\Code\ReservationProject\ReservationProject.Application\bin\Debug\netcoreapp3.1\ReservationProject.Application.dll
+H:\My work\Reservation Project\Code\ReservationProject\ReservationProject.Application\bin\Debug\netcoreapp3.1\ReservationProject.Application.pdb
+H:\My work\Reservation Project\Code\ReservationProject\ReservationProject.Application\bin\Debug\netcoreapp3.1\ReservationProject.Domain.dll
+H:\My work\Reservation Project\Code\ReservationProject\ReservationProject.Application\bin\Debug\netcoreapp3.1\ReservationProject.Domain.pdb
+H:\My work\Reservation Project\Code\ReservationProject\ReservationProject.Application\obj\Debug\netcoreapp3.1\ReservationProject.Application.csprojAssemblyReference.cache
+H:\My work\Reservation Project\Code\ReservationProject\ReservationProject.Application\obj\Debug\netcoreapp3.1\ReservationProject.Application.AssemblyInfoInputs.cache
+H:\My work\Reservation Project\Code\ReservationProject\ReservationProject.Application\obj\Debug\netcoreapp3.1\ReservationProject.Application.AssemblyInfo.cs
+H:\My work\Reservation Project\Code\ReservationProject\ReservationProject.Application\obj\Debug\netcoreapp3.1\ReservationProject.Application.csproj.CoreCompileInputs.cache
+H:\My work\Reservation Project\Code\ReservationProject\ReservationProject.Application\obj\Debug\netcoreapp3.1\ReservationProject.Application.csproj.CopyComplete
+H:\My work\Reservation Project\Code\ReservationProject\ReservationProject.Application\obj\Debug\netcoreapp3.1\ReservationProject.Application.dll
+H:\My work\Reservation Project\Code\ReservationProject\ReservationProject.Application\obj\Debug\netcoreapp3.1\ReservationProject.Application.pdb
+D:\ReservationProject\ReservationProject.Application\bin\Debug\netcoreapp3.1\ReservationProject.Application.deps.json
+D:\ReservationProject\ReservationProject.Application\bin\Debug\netcoreapp3.1\ReservationProject.Application.dll
+D:\ReservationProject\ReservationProject.Application\bin\Debug\netcoreapp3.1\ReservationProject.Application.pdb
+D:\ReservationProject\ReservationProject.Application\bin\Debug\netcoreapp3.1\ReservationProject.Domain.dll
+D:\ReservationProject\ReservationProject.Application\bin\Debug\netcoreapp3.1\ReservationProject.Domain.pdb
+D:\ReservationProject\ReservationProject.Application\obj\Debug\netcoreapp3.1\ReservationProject.Application.csprojAssemblyReference.cache
+D:\ReservationProject\ReservationProject.Application\obj\Debug\netcoreapp3.1\ReservationProject.Application.AssemblyInfoInputs.cache
+D:\ReservationProject\ReservationProject.Application\obj\Debug\netcoreapp3.1\ReservationProject.Application.AssemblyInfo.cs
+D:\ReservationProject\ReservationProject.Application\obj\Debug\netcoreapp3.1\ReservationProject.Application.csproj.CoreCompileInputs.cache
+D:\ReservationProject\ReservationProject.Application\obj\Debug\netcoreapp3.1\ReservationProject.Application.csproj.CopyComplete
+D:\ReservationProject\ReservationProject.Application\obj\Debug\netcoreapp3.1\ReservationProject.Application.dll
+D:\ReservationProject\ReservationProject.Application\obj\Debug\netcoreapp3.1\ReservationProject.Application.pdb
+D:\Project with out Errors\ReservationProject\ReservationProject.Application\bin\Debug\netcoreapp3.1\ReservationProject.Application.deps.json
+D:\Project with out Errors\ReservationProject\ReservationProject.Application\bin\Debug\netcoreapp3.1\ReservationProject.Application.dll
+D:\Project with out Errors\ReservationProject\ReservationProject.Application\bin\Debug\netcoreapp3.1\ReservationProject.Application.pdb
+D:\Project with out Errors\ReservationProject\ReservationProject.Application\bin\Debug\netcoreapp3.1\ReservationProject.Domain.dll
+D:\Project with out Errors\ReservationProject\ReservationProject.Application\bin\Debug\netcoreapp3.1\ReservationProject.Domain.pdb
+D:\Project with out Errors\ReservationProject\ReservationProject.Application\obj\Debug\netcoreapp3.1\ReservationProject.Application.csprojAssemblyReference.cache
+D:\Project with out Errors\ReservationProject\ReservationProject.Application\obj\Debug\netcoreapp3.1\ReservationProject.Application.AssemblyInfoInputs.cache
+D:\Project with out Errors\ReservationProject\ReservationProject.Application\obj\Debug\netcoreapp3.1\ReservationProject.Application.AssemblyInfo.cs
+D:\Project with out Errors\ReservationProject\ReservationProject.Application\obj\Debug\netcoreapp3.1\ReservationProject.Application.csproj.CoreCompileInputs.cache
+D:\Project with out Errors\ReservationProject\ReservationProject.Application\obj\Debug\netcoreapp3.1\ReservationProject.Application.csproj.CopyComplete
+D:\Project with out Errors\ReservationProject\ReservationProject.Application\obj\Debug\netcoreapp3.1\ReservationProject.Application.dll
+D:\Project with out Errors\ReservationProject\ReservationProject.Application\obj\Debug\netcoreapp3.1\ReservationProject.Application.pdb
+C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\ReservationProject.Application\bin\Debug\netcoreapp3.1\ReservationProject.Application.deps.json
+C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\ReservationProject.Application\bin\Debug\netcoreapp3.1\ReservationProject.Application.dll
+C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\ReservationProject.Application\bin\Debug\netcoreapp3.1\ReservationProject.Application.pdb
+C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\ReservationProject.Application\bin\Debug\netcoreapp3.1\ReservationProject.Domain.dll
+C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\ReservationProject.Application\bin\Debug\netcoreapp3.1\ReservationProject.Domain.pdb
+C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\ReservationProject.Application\obj\Debug\netcoreapp3.1\ReservationProject.Application.csprojAssemblyReference.cache
+C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\ReservationProject.Application\obj\Debug\netcoreapp3.1\ReservationProject.Application.AssemblyInfoInputs.cache
+C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\ReservationProject.Application\obj\Debug\netcoreapp3.1\ReservationProject.Application.AssemblyInfo.cs
+C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\ReservationProject.Application\obj\Debug\netcoreapp3.1\ReservationProject.Application.csproj.CoreCompileInputs.cache
+C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\ReservationProject.Application\obj\Debug\netcoreapp3.1\ReservationProject.Application.csproj.CopyComplete
+C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\ReservationProject.Application\obj\Debug\netcoreapp3.1\ReservationProject.Application.dll
+C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\ReservationProject.Application\obj\Debug\netcoreapp3.1\ReservationProject.Application.pdb

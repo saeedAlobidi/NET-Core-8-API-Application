@@ -1,0 +1,17 @@
+C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\Reservation.Infrastructure\bin\Release\netcoreapp3.1\ReservationProject.Infrastructure.deps.json
+C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\Reservation.Infrastructure\bin\Release\netcoreapp3.1\ReservationProject.Infrastructure.runtimeconfig.json
+C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\Reservation.Infrastructure\bin\Release\netcoreapp3.1\ReservationProject.Infrastructure.runtimeconfig.dev.json
+C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\Reservation.Infrastructure\bin\Release\netcoreapp3.1\ReservationProject.Infrastructure.dll
+C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\Reservation.Infrastructure\bin\Release\netcoreapp3.1\ReservationProject.Infrastructure.pdb
+C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\Reservation.Infrastructure\bin\Release\netcoreapp3.1\ReservationProject.Application.dll
+C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\Reservation.Infrastructure\bin\Release\netcoreapp3.1\ReservationProject.Domain.dll
+C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\Reservation.Infrastructure\bin\Release\netcoreapp3.1\ReservationProject.Application.pdb
+C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\Reservation.Infrastructure\bin\Release\netcoreapp3.1\ReservationProject.Domain.pdb
+C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\Reservation.Infrastructure\obj\Release\netcoreapp3.1\ReservationProject.Infrastructure.csprojAssemblyReference.cache
+C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\Reservation.Infrastructure\obj\Release\netcoreapp3.1\ReservationProject.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\Reservation.Infrastructure\obj\Release\netcoreapp3.1\ReservationProject.Infrastructure.AssemblyInfo.cs
+C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\Reservation.Infrastructure\obj\Release\netcoreapp3.1\ReservationProject.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\Reservation.Infrastructure\obj\Release\netcoreapp3.1\ReservationProject.Infrastructure.csproj.CopyComplete
+C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\Reservation.Infrastructure\obj\Release\netcoreapp3.1\ReservationProject.Infrastructure.dll
+C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\Reservation.Infrastructure\obj\Release\netcoreapp3.1\ReservationProject.Infrastructure.pdb
+C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\Reservation.Infrastructure\obj\Release\netcoreapp3.1\ReservationProject.Infrastructure.genruntimeconfig.cache
