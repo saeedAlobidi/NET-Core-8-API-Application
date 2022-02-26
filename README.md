@@ -14,7 +14,7 @@ This is an example of a simple CRUD asp.net core5 MVC application for enterprise
  
  1- The application is built to accept different changes in each level 
 
-2-You can add more than one controller use case repository without affecting the structure of the project or write more code <br />
+2-You can add more than one controller , usecase and repository without affecting the structure of the project or write more code <br />
 
 3- The application used asp.net MVC core 5 and dependency injection
 
