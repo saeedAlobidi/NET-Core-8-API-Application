@@ -17,7 +17,8 @@ This is an example of a simple CRUD asp.net core5 mvc application for enterprise
 	3- The application  used asp.net mvc core 5 and dependency  indejction
 	3- The application  used Entity Framewrok  as ORM 
 	4-The application  used Microsoft.AspNetCore.Identity  for authentication and authorization
-	5-code Testable  <br />
+	5-deploy docker image
+	6-code Testable  <br />
    
  <br />
 
