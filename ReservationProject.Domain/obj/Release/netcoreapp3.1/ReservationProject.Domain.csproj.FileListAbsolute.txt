@@ -1,9 +1,0 @@
-C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\ReservationProject.Domain\bin\Release\netcoreapp3.1\ReservationProject.Domain.deps.json
-C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\ReservationProject.Domain\bin\Release\netcoreapp3.1\ReservationProject.Domain.dll
-C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\ReservationProject.Domain\bin\Release\netcoreapp3.1\ReservationProject.Domain.pdb
-C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\ReservationProject.Domain\obj\Release\netcoreapp3.1\ReservationProject.Domain.csprojAssemblyReference.cache
-C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\ReservationProject.Domain\obj\Release\netcoreapp3.1\ReservationProject.Domain.AssemblyInfoInputs.cache
-C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\ReservationProject.Domain\obj\Release\netcoreapp3.1\ReservationProject.Domain.AssemblyInfo.cs
-C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\ReservationProject.Domain\obj\Release\netcoreapp3.1\ReservationProject.Domain.csproj.CoreCompileInputs.cache
-C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\ReservationProject.Domain\obj\Release\netcoreapp3.1\ReservationProject.Domain.dll
-C:\Users\SAEED\Desktop\project\zero one\reservation\reservation\ReservationProject\ReservationProject.Domain\obj\Release\netcoreapp3.1\ReservationProject.Domain.pdb
