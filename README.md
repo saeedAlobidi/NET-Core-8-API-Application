@@ -1,6 +1,6 @@
 <b>
 This is an example of a simple CRUD asp.net core5 mvc application for enterprise applications with layered software base on clean-architecture for Uncle Bob's. used Entity Framewrok  and  Microsoft.AspNetCore.Identity  for authentication and authorization  and dependency injection
-
+<br /> <br />
 <img src="https://www.ryadel.com/wp-content/uploads/2018/11/asp-net-core-logo-735x300.png" alt="clean architecture">
  <br /> <br />
 </b>
