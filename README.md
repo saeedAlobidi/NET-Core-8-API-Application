@@ -12,13 +12,19 @@ This is an example of a simple CRUD asp.net core5 MVC application for enterprise
  
 <br/>
  
-	1- The application is built to accept different changes in each level <br />
-	2-You can add more than one controller usecase repository  without affecting the structure of the project or write more of code <br />
-	3- The application  used asp.net mvc core 5 and dependency  indejction
-	3- The application  used Entity Framewrok  as ORM 
-	4-The application  used Microsoft.AspNetCore.Identity  for authentication and authorization
-	5-deploy docker image
-	6-code Testable  <br />
+	 1- The application is built to accept different changes in each level 
+
+2-You can add more than one controller use case repository without affecting the structure of the project or write more code <br />
+
+3- The application used asp.net MVC core 5 and dependency injection
+
+3- The application used Entity Framework as ORM 
+
+ 4- The application used Microsoft.AspNetCore.Identity for authentication and authorization
+
+5-deploy docker image
+
+6-code Testable <br />
    
  <br />
 
