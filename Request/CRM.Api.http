@@ -1,0 +1,44 @@
+@host = http://localhost:5291
+
+
+
+POST  {{host}}/Leads/v1/api/Leads
+Content-Type:application/json
+
+{
+    "Age":30,
+    "Name":"saeed",
+    "Email":"Saeed1adm@Gmail.com",
+    "Linkedin":"https://www.linkedin.com/in/saeed-mohammed-al-obidi-289082147/"
+     
+ }
+
+###
+
+ 
+ 
+
+GET {{host}}/Leads/v1/api/Leads/?leadId=3
+Accept: application/json
+
+###
+
+POST  {{host}}/Services/v1/api/Services
+Content-Type:application/json
+
+{
+  "name": "subscription",
+  "price": 100
+}
+
+
+###
+POST  {{host}}/Applications/v1/api/Application
+Content-Type:application/json
+
+{
+ "name": "Transfer the ASUS ROG G16 16-inch laptop to Saeed's address.",
+  "leadId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "servicesId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+}
+ 

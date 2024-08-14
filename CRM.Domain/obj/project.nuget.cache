@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "w1G7UMrfrF0=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\SAEED\\Desktop\\example\\CRM.Domain\\CRM.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\SAEED\\.nuget\\packages\\erroror\\1.2.1\\erroror.1.2.1.nupkg.sha512",
+    "C:\\Users\\SAEED\\.nuget\\packages\\fluentvalidation\\11.9.2\\fluentvalidation.11.9.2.nupkg.sha512",
+    "C:\\Users\\SAEED\\.nuget\\packages\\mediatr\\12.4.0\\mediatr.12.4.0.nupkg.sha512",
+    "C:\\Users\\SAEED\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\SAEED\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
