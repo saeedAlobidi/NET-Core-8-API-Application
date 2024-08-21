@@ -1,4 +1,5 @@
 using CRM.Applications.Common.Interface;
+using CRM.Domain.Leads;
 using ErrorOr;
 using MediatR;
 
@@ -19,7 +20,7 @@ public class CreateLeadHandler : IRequestHandler<CreateLeadCommand, ErrorOr<Doma
 
     public async Task<ErrorOr<Domain.Leads.Lead>> Handle(CreateLeadCommand request, CancellationToken cancellationToken)
     {
-        var lead = new Domain.Leads.Lead
+        Lead lead = new ()
         {
              age = request.Age,
             name = request.Name,

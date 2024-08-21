@@ -16,7 +16,8 @@ public class Lead : Entity<int>
     public bool isCustomer = false;
     public bool isDeleted = false;
 
-
+    
+    
 
     public async Task<ErrorOr<Success>> AddLead()
     {

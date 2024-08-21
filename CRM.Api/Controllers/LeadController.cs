@@ -1,4 +1,5 @@
 using CRM.Api.Common.Api;
+using CRM.Api.Controllers.Common.Filters;
 using CRM.Api.Controllers.Common.Mapping;
 using CRM.Api.Controllers.Contracts;
 using CRM.Leads.Queries.GetLeads;
@@ -17,24 +18,25 @@ namespace CRM.Api.Controllers
             {
             }
 
-            [HttpPost(ApiEndpoints.Leads.Create)]
 
+            [HttpPost(ApiEndpoints.Leads.Create)]
+            [ServiceFilter(typeof(CustomLog))]
             public async Task<IActionResult> CreateLead(CreateLeadRequest request)
             {
                   var command = request.MapToLeadsCommand();
                   var createLeadResult = await _mediatR.Send(command);
 
-                  return createLeadResult.Match(lead => Created($"{ApiEndpoints.Leads.Get}?{lead.Id}",lead.MapToResponse()), Problem);
+                  return createLeadResult.Match(lead => Created($"{ApiEndpoints.Leads.Get}?{lead.Id}", lead.MapToResponse()), Problem);
 
             }
 
 
             [HttpGet(ApiEndpoints.Leads.Get)]
-            public async Task<IActionResult> Get([FromQuery]int leadId)
+            public async Task<IActionResult> Get([FromQuery] int leadId)
             {
                   var command = new GetLeadQuery(leadId);
                   var GetLeadResult = await _mediatR.Send(command);
-                    return GetLeadResult.Match(success => Ok(success), Problem);
+                  return GetLeadResult.Match(success => Ok(success), Problem);
 
             }
 

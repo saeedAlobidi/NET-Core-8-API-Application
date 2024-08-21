@@ -2,10 +2,12 @@ using CRM.Api.Controllers.Common.Middleware;
 
 using CRM.Infrastructure;
 using CRM.Applications;
+using CRM.Api.Controllers.Common.Filters;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddScoped<CustomLog>();
 builder.Services.AddSwaggerGen();
 builder.Services.addApplication();
 builder.Services.addInfrastructure();

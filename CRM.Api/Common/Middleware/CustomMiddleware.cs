@@ -51,7 +51,7 @@ namespace CRM.Api.Controllers.Common.Middleware
 
 
                
-                 _globalErrorHandler = new GlobalErrorHandler(exception);
+             _globalErrorHandler = new GlobalErrorHandler(exception);
                 await _mediator.Publish(_globalErrorHandler);
             }
 
