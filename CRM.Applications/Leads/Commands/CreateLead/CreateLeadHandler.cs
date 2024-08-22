@@ -30,7 +30,7 @@ public class CreateLeadHandler : IRequestHandler<CreateLeadCommand, ErrorOr<Doma
         var status = await lead.AddLead();
         if (status.IsError)
             return status.Errors;
-        await _leadRepository.AddAsync(lead);
+        await _leadRepository.AddAsync(lead,cancellationToken);
         await _unitOfWork.CommitChangesAsync();
         return lead;
     }

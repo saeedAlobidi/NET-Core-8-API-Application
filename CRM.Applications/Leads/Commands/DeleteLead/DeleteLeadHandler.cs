@@ -21,12 +21,12 @@ public class CreateLeadHandler : IRequestHandler<DeleteLeadCommand, ErrorOr<Succ
     {
        
         
-       var lead=await _leadRepository.GetOneAsync(request.id);
+       var lead=await _leadRepository.GetOneAsync(request.id,cancellationToken);
        var validator=lead.deleteLead();
           if(validator.IsError)
           return validator.Errors;
           
-        await _leadRepository.DeleteAsync(lead);
+        await _leadRepository.DeleteAsync(lead,cancellationToken);
         await _unitOfWork.CommitChangesAsync();
         return Result.Success;
         

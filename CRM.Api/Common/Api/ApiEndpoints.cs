@@ -14,7 +14,7 @@ public static class ApiEndpoints
         
         public const string Create = Base;
         public const string Get = $"{Base}/";
-
+public const string GetById = $"{Base}/{{id}}";
          
     }
 
@@ -26,6 +26,7 @@ public static class ApiEndpoints
         
         public const string Create = Base;
         public const string Get = $"{Base}/";
+        
 
          
     }

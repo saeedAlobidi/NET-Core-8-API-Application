@@ -18,26 +18,26 @@ public class ServicesRepository : IServicesRepository
     }
 
 
-    public async Task AddAsync(Service Service)
+    public async Task AddAsync(Service Service,CancellationToken token)
     {
-        await _genericRepository.AddAsync(Service);
+        await _genericRepository.AddAsync(Service,token);
     }
 
 
-    public async Task DeleteAsync(int Id)
+    public async Task DeleteAsync(int Id,CancellationToken token)
     {
-        await _genericRepository.DeleteAsync(lead => lead.Id == Id);
+        await _genericRepository.DeleteAsync(lead => lead.Id == Id,token);
     }
 
 
 
-    public async Task<Service> GetOneAsync(int Id)
+    public async Task<Service> GetOneAsync(int Id,CancellationToken token)
     {
-        return await _genericRepository.GetOneAsync(Service => Service.Id == Id, sv_project => sv_project);
+        return await _genericRepository.GetOneAsync(Service => Service.Id == Id, sv_project => sv_project,token);
     }
 
-    public async Task UpdateAsync(Service entity)
+    public async Task UpdateAsync(Service entity,CancellationToken token)
     {
-        await _genericRepository.UpdateAsync(entity);
+        await _genericRepository.UpdateAsync(entity,token);
     }
 }

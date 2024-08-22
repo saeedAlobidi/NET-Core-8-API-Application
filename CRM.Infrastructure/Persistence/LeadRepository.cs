@@ -18,35 +18,35 @@ public class LeadRepository : ILeadRepository
     }
 
 
-    public async Task AddAsync(Lead lead)
+    public async Task AddAsync(Lead lead,CancellationToken token)
     {
 
 
-        await _genericRepository.AddAsync(lead);
+        await _genericRepository.AddAsync(lead,token);
     }
 
 
-    public async Task DeleteAsync(int Id)
+    public async Task DeleteAsync(int Id,CancellationToken token)
     {
 
-        await _genericRepository.DeleteAsync(lead => lead.Id == Id);
+        await _genericRepository.DeleteAsync(lead => lead.Id == Id,token);
     }
 
-    public async Task DeleteAsync(Lead Lead)
+    public async Task DeleteAsync(Lead Lead,CancellationToken token)
     {
-        await _genericRepository.DeleteAsync(Lead);
+        await _genericRepository.DeleteAsync(Lead,token);
      }
    
 
-    public async Task<Lead> GetOneAsync(int Id)
+    public async Task<Lead> GetOneAsync(int Id,CancellationToken token)
     {
 
-      return await _genericRepository.GetOneAsync<Lead>(lead => lead.Id == Id, lead_project => lead_project);
+      return await _genericRepository.GetOneAsync<Lead>(lead => lead.Id == Id, lead_project => lead_project,token);
         
     }
 
-    public async Task UpdateAsync(Lead entity)
+    public async Task UpdateAsync(Lead entity,CancellationToken token)
     {
-        await _genericRepository.UpdateAsync(entity);
+        await _genericRepository.UpdateAsync(entity,token);
     }
 }

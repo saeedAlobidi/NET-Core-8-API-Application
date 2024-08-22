@@ -28,7 +28,7 @@ public class CreateServicesHandler : IRequestHandler<CreateServicesCommand, Erro
         var status = await service.AddService();
         if (status.IsError)
             return status.Errors;
-        await _servicesRepository.AddAsync(service);
+        await _servicesRepository.AddAsync(service,cancellationToken);
         await _unitOfWork.CommitChangesAsync();
         return service;
     }

@@ -20,7 +20,7 @@ public class GetLeadQueryHandler : IRequestHandler<GetLeadQuery, ErrorOr<Lead>>
 
     public async Task<ErrorOr<Lead>> Handle(GetLeadQuery request, CancellationToken cancellationToken)
     {
-       return await _leadRepository.GetOneAsync(request.LeadId);
+       return await _leadRepository.GetOneAsync(request.LeadId,cancellationToken);
         
 
     }

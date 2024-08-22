@@ -19,7 +19,7 @@ namespace CRM.Api.Controllers
 
             [HttpPost(ApiEndpoints.Services.Create)]
 
-            public async Task<IActionResult> CreateService(CreateServiceRequest request)
+            public async Task<IActionResult> CreateService(CreateServiceRequest request,CancellationToken token)
             {
                   var command = request.MapToServicessCommand();
                   var createServiceResult = await _mediatR.Send(command);
@@ -31,7 +31,7 @@ namespace CRM.Api.Controllers
 
 
             [HttpGet(ApiEndpoints.Services.Get)]
-            public IActionResult Get()
+            public IActionResult Get(CancellationToken token)
             {
                   return Ok("hi this is saeed ^_^");
 

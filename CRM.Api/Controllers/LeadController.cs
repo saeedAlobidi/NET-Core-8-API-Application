@@ -3,7 +3,6 @@ using CRM.Api.Controllers.Common.Filters;
 using CRM.Api.Controllers.Common.Mapping;
 using CRM.Api.Controllers.Contracts;
 using CRM.Leads.Queries.GetLeads;
-using ErrorOr;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,7 +20,7 @@ namespace CRM.Api.Controllers
 
             [HttpPost(ApiEndpoints.Leads.Create)]
             [ServiceFilter(typeof(CustomLog))]
-            public async Task<IActionResult> CreateLead(CreateLeadRequest request)
+            public async Task<IActionResult> CreateLead(CreateLeadRequest request,CancellationToken token)
             {
                   var command = request.MapToLeadsCommand();
                   var createLeadResult = await _mediatR.Send(command);
@@ -32,7 +31,7 @@ namespace CRM.Api.Controllers
 
 
             [HttpGet(ApiEndpoints.Leads.Get)]
-            public async Task<IActionResult> Get([FromQuery] int leadId)
+            public async Task<IActionResult> Get([FromQuery] int leadId ,CancellationToken token)
             {
                   var command = new GetLeadQuery(leadId);
                   var GetLeadResult = await _mediatR.Send(command);
@@ -40,7 +39,14 @@ namespace CRM.Api.Controllers
 
             }
 
+            [HttpGet(ApiEndpoints.Leads.GetById)]
+            public async Task<IActionResult> GetById(int Id ,CancellationToken token)
+            {
+                  var command = new GetLeadQuery(Id);
+                  var GetLeadResult = await _mediatR.Send(command);
+                  return GetLeadResult.Match(success => Ok(success), Problem);
 
+            }
 
 
       }

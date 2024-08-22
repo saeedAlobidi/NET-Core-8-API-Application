@@ -26,15 +26,15 @@ public class CreateApplicationsHandler : IRequestHandler<CreateApplicationsComma
     public async Task<ErrorOr<Domain.Applications.Application>> Handle(CreateApplicationsCommand request, CancellationToken cancellationToken)
     {
 
-        var lead = await _leadRepository.GetOneAsync(request.LeadId);
-        var service = await _servicesRepository.GetOneAsync(request.ServiceId);
+        var lead = await _leadRepository.GetOneAsync(request.LeadId,cancellationToken);
+        var service = await _servicesRepository.GetOneAsync(request.ServiceId,cancellationToken);
         var application = new Application();
 
         var status = await application.AddApplication(lead, service, request.Name);
         if (status.IsError)
             return status.Errors;
 
-        await _applicationsRepository.AddAsync(application);
+        await _applicationsRepository.AddAsync(application,cancellationToken);
         await _unitOfWork.CommitChangesAsync();
         return application;
     }

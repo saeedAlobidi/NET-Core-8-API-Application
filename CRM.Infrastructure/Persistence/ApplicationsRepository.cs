@@ -18,26 +18,26 @@ public class ApplicationRepository : IApplicationsRepository
     }
 
 
-    public async Task AddAsync(Application Application)
+    public async Task AddAsync(Application Application,CancellationToken token)
     {
-        await _genericRepository.AddAsync(Application);
+        await _genericRepository.AddAsync(Application,token);
     }
 
 
-    public async Task DeleteAsync(int Id)
+    public async Task DeleteAsync(int Id,CancellationToken token)
     {
-        await _genericRepository.DeleteAsync(app => app.Id == Id);
+        await _genericRepository.DeleteAsync(app => app.Id == Id,token);
     }
 
 
 
-    public async Task<Application> GetOneAsync(int Id)
+    public async Task<Application> GetOneAsync(int Id,CancellationToken token)
     {
-        return await _genericRepository.GetOneAsync(Application => Application.Id == Id, ap_project => ap_project);
+        return await _genericRepository.GetOneAsync(Application => Application.Id == Id, ap_project => ap_project,token);
     }
 
-    public async Task UpdateAsync(Application entity)
+    public async Task UpdateAsync(Application entity,CancellationToken token)
     {
-        await _genericRepository.UpdateAsync(entity);
+        await _genericRepository.UpdateAsync(entity,token);
     }
 }

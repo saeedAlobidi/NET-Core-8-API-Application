@@ -22,6 +22,11 @@ GET {{host}}/Leads/v1/api/Leads/?leadId=3
 Accept: application/json
 
 ###
+//or 
+GET {{host}}/Leads/v1/api/Leads/d/1
+Accept: application/json
+
+###
 
 POST  {{host}}/Services/v1/api/Services
 Content-Type:application/json

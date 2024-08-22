@@ -7,10 +7,10 @@
 using CRM.Domain.Applications;
 
 public interface IApplicationsRepository{
-    Task<Application> GetOneAsync(int Id);
-    Task AddAsync(Application entity);
-    Task DeleteAsync(int Id);
-    Task UpdateAsync(Application entity);
+    Task<Application> GetOneAsync(int Id,CancellationToken token);
+    Task AddAsync(Application entity,CancellationToken token);
+    Task DeleteAsync(int Id,CancellationToken token);
+    Task UpdateAsync(Application entity,CancellationToken token);
 }
 
  

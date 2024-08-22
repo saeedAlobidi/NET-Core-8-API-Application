@@ -19,7 +19,7 @@ namespace CRM.Api.Controllers
 
             [HttpPost(ApiEndpoints.Applications.Create)]
 
-            public async Task<IActionResult> CreateApplication(CreateApplicationRequest request)
+            public async Task<IActionResult> CreateApplication(CreateApplicationRequest request,CancellationToken token)
             {
                   var command = request.MapToApplicationsCommand();
                   var createApplicationResult = await _mediatR.Send(command);
@@ -30,7 +30,7 @@ namespace CRM.Api.Controllers
 
 
             [HttpGet(ApiEndpoints.Applications.Get)]
-            public IActionResult Get()
+            public IActionResult Get(CancellationToken token)
             {
                   return Ok("hi this is saeed1adm ^_^");
 
