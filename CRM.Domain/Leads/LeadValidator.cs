@@ -25,7 +25,7 @@ public class LeadValidator : AbstractValidator<Lead>
         RuleFor(_lead => _lead.email)
                .NotNull()
              .EmailAddress()
-            .WithMessage("Name cannot be empty. Please provide a valid Email.");
+            .WithMessage(" Please provide a valid Email.");
 
         // Linkedin for Name
         RuleFor(_lead => _lead.linkedin)
