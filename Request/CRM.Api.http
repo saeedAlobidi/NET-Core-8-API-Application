@@ -2,13 +2,44 @@
 
 
 
+
+POST  {{host}}/Users/v1/api/Users
+Content-Type:application/json
+
+{
+  
+    "Name":"saeed mohammed al-abidi",
+    "PasswordHash":"saeed!124",
+    "UserName":"saeed1adm@Gmail.com",
+    "linkedin":"https://www.linkedin.com/in/saeed-mohammed-al-obidi-289082147/"
+     
+ }
+
+###
+
+POST  {{host}}/Users/v1/api/Users/Roles
+Content-Type:application/json
+
+{
+  
+    "UserName":"saeed1adm@Gmail.com",
+    "permissions":["read","write"]
+     
+ }
+
+###
+
+###
+
 POST  {{host}}/Leads/v1/api/Leads
 Content-Type:application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtb2FoYW1tZWRAR21haWwuY29tIiwianRpIjoiOTIzM2IwODUtNTM0Yy00OTVjLTk1YTItNGVkNDRiN2IyOWQ0IiwiUGVybWlzc2lvbiI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNzI0NDQwNTgwLCJpc3MiOiJZb3VySXNzdWVyIiwiYXVkIjoiWW91ckF1ZGllbmNlIn0.B0RW4x9NAltwyNXwttA1lWZROLkiK4KaP5M8G8RPX9k
+
 
 {
     "Age":30,
     "Name":"saeed",
-    "Email":"Saeed1adm@Gmail.com",
+    "Email":"saeed1adm@Gmail.com",
     "Linkedin":"https://www.linkedin.com/in/saeed-mohammed-al-obidi-289082147/"
      
  }

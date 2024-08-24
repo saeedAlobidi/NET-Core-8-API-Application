@@ -10,7 +10,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddScoped<CustomLog>();
 builder.Services.AddSwaggerGen();
 builder.Services.addApplication();
-builder.Services.addInfrastructure();
+builder.Services.addInfrastructure(builder.Configuration);
 builder.Services.AddMediatR(options =>
 {
   options.RegisterServicesFromAssemblyContaining(typeof(Program));
@@ -27,11 +27,14 @@ if (app.Environment.IsDevelopment())
   app.UseSwagger();
   app.UseSwaggerUI();
 }
+app.MapControllers();
+
+app.UseAuthentication();
+app.UseAuthorization();
 app.UseMiddleware<CustomMiddleware>();
 
 app.UseHttpsRedirection();
-app.UseAuthorization();
-app.MapControllers();
+
 
 app.Run();
 

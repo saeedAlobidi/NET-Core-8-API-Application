@@ -4,6 +4,7 @@ using CRM.Api.Controllers.Contracts;
 
 
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 
@@ -18,7 +19,7 @@ namespace CRM.Api.Controllers
             }
 
             [HttpPost(ApiEndpoints.Services.Create)]
-
+            [Authorize(Policy = "service.read")]
             public async Task<IActionResult> CreateService(CreateServiceRequest request,CancellationToken token)
             {
                   var command = request.MapToServicessCommand();
@@ -31,6 +32,7 @@ namespace CRM.Api.Controllers
 
 
             [HttpGet(ApiEndpoints.Services.Get)]
+            [Authorize(Policy = "service.read")]
             public IActionResult Get(CancellationToken token)
             {
                   return Ok("hi this is saeed ^_^");

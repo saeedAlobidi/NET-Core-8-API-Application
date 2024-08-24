@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CRM.Infrastructure
-build_property.ProjectDir = C:\Users\SAEED\Desktop\example\CRM.Infrastructure\
+build_property.ProjectDir = c:\Users\SAEED\Desktop\example\CRM.Infrastructure\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

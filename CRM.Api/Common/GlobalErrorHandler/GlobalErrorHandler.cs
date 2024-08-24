@@ -15,7 +15,7 @@ namespace CRM.Api.Controllers.Common.GlobalErrorHandler
 
         public async Task Handle(CustomMiddleware.GlobalErrorHandler notification, CancellationToken cancellationToken)
         {
-            Console.WriteLine("exception==> ", notification.exception.Message.FirstOrDefault());
+            Console.WriteLine("exception==> ", notification.exception.Message);
 
         }
 

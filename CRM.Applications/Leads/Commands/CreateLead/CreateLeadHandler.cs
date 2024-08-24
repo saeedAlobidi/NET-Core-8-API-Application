@@ -3,7 +3,7 @@ using CRM.Domain.Leads;
 using ErrorOr;
 using MediatR;
 
-namespace  CRM.Leads.Commands.CreateLead;
+namespace CRM.Leads.Commands.CreateLead;
 
 
 public class CreateLeadHandler : IRequestHandler<CreateLeadCommand, ErrorOr<Domain.Leads.Lead>>
@@ -20,25 +20,27 @@ public class CreateLeadHandler : IRequestHandler<CreateLeadCommand, ErrorOr<Doma
 
     public async Task<ErrorOr<Domain.Leads.Lead>> Handle(CreateLeadCommand request, CancellationToken cancellationToken)
     {
-        Lead lead = new ()
+        Lead lead = new()
         {
-             age = request.Age,
+            age = request.Age,
             name = request.Name,
             email = request.Email,
             linkedin = request.Linkedin
         };
+        
         var status = await lead.AddLead();
         if (status.IsError)
             return status.Errors;
-        await _leadRepository.AddAsync(lead,cancellationToken);
+
+        await _leadRepository.AddAsync(lead, cancellationToken);
         await _unitOfWork.CommitChangesAsync();
         return lead;
     }
 
- }
+}
 
 
 
-    
+
 
 

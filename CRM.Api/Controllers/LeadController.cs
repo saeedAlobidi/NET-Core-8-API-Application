@@ -4,6 +4,7 @@ using CRM.Api.Controllers.Common.Mapping;
 using CRM.Api.Controllers.Contracts;
 using CRM.Leads.Queries.GetLeads;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 
@@ -12,7 +13,7 @@ namespace CRM.Api.Controllers
       [ApiController]
       [Route("[controller]")]
       public class LeadsController : ApiController
-      {
+      {     
             public LeadsController(ISender mediatR) : base(mediatR)
             {
             }
@@ -20,7 +21,8 @@ namespace CRM.Api.Controllers
 
             [HttpPost(ApiEndpoints.Leads.Create)]
             [ServiceFilter(typeof(CustomLog))]
-            public async Task<IActionResult> CreateLead(CreateLeadRequest request,CancellationToken token)
+            [Authorize(Policy = "lead.write")]
+            public async Task<IActionResult> CreateLead(CreateLeadRequest request, CancellationToken token)
             {
                   var command = request.MapToLeadsCommand();
                   var createLeadResult = await _mediatR.Send(command);
@@ -31,7 +33,8 @@ namespace CRM.Api.Controllers
 
 
             [HttpGet(ApiEndpoints.Leads.Get)]
-            public async Task<IActionResult> Get([FromQuery] int leadId ,CancellationToken token)
+            [Authorize(Policy = "lead.read")]
+            public async Task<IActionResult> Get([FromQuery] int leadId, CancellationToken token)
             {
                   var command = new GetLeadQuery(leadId);
                   var GetLeadResult = await _mediatR.Send(command);
@@ -40,7 +43,8 @@ namespace CRM.Api.Controllers
             }
 
             [HttpGet(ApiEndpoints.Leads.GetById)]
-            public async Task<IActionResult> GetById(int Id ,CancellationToken token)
+            [Authorize(Policy = "lead.read")]
+            public async Task<IActionResult> GetById(int Id, CancellationToken token)
             {
                   var command = new GetLeadQuery(Id);
                   var GetLeadResult = await _mediatR.Send(command);

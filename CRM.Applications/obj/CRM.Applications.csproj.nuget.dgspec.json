@@ -33,8 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\SAEED\\Desktop\\example\\CRM.Domain\\CRM.Domain.csproj": {
-                "projectPath": "C:\\Users\\SAEED\\Desktop\\example\\CRM.Domain\\CRM.Domain.csproj"
+              "c:\\Users\\SAEED\\Desktop\\example\\CRM.Domain\\CRM.Domain.csproj": {
+                "projectPath": "c:\\Users\\SAEED\\Desktop\\example\\CRM.Domain\\CRM.Domain.csproj"
               }
             }
           }
@@ -83,14 +83,14 @@
         }
       }
     },
-    "C:\\Users\\SAEED\\Desktop\\example\\CRM.Domain\\CRM.Domain.csproj": {
+    "c:\\Users\\SAEED\\Desktop\\example\\CRM.Domain\\CRM.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SAEED\\Desktop\\example\\CRM.Domain\\CRM.Domain.csproj",
+        "projectUniqueName": "c:\\Users\\SAEED\\Desktop\\example\\CRM.Domain\\CRM.Domain.csproj",
         "projectName": "CRM.Domain",
-        "projectPath": "C:\\Users\\SAEED\\Desktop\\example\\CRM.Domain\\CRM.Domain.csproj",
+        "projectPath": "c:\\Users\\SAEED\\Desktop\\example\\CRM.Domain\\CRM.Domain.csproj",
         "packagesPath": "C:\\Users\\SAEED\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SAEED\\Desktop\\example\\CRM.Domain\\obj\\",
+        "outputPath": "c:\\Users\\SAEED\\Desktop\\example\\CRM.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

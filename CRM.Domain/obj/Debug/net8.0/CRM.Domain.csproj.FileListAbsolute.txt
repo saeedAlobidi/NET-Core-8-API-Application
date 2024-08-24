@@ -1,6 +1,7 @@
 C:\Users\SAEED\Desktop\example\CRM.Domain\bin\Debug\net8.0\CRM.Domain.deps.json
 C:\Users\SAEED\Desktop\example\CRM.Domain\bin\Debug\net8.0\CRM.Domain.dll
 C:\Users\SAEED\Desktop\example\CRM.Domain\bin\Debug\net8.0\CRM.Domain.pdb
+C:\Users\SAEED\Desktop\example\CRM.Domain\obj\Debug\net8.0\CRM.Domain.csproj.AssemblyReference.cache
 C:\Users\SAEED\Desktop\example\CRM.Domain\obj\Debug\net8.0\CRM.Domain.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\SAEED\Desktop\example\CRM.Domain\obj\Debug\net8.0\CRM.Domain.AssemblyInfoInputs.cache
 C:\Users\SAEED\Desktop\example\CRM.Domain\obj\Debug\net8.0\CRM.Domain.AssemblyInfo.cs
@@ -9,4 +10,3 @@ C:\Users\SAEED\Desktop\example\CRM.Domain\obj\Debug\net8.0\CRM.Domain.dll
 C:\Users\SAEED\Desktop\example\CRM.Domain\obj\Debug\net8.0\refint\CRM.Domain.dll
 C:\Users\SAEED\Desktop\example\CRM.Domain\obj\Debug\net8.0\CRM.Domain.pdb
 C:\Users\SAEED\Desktop\example\CRM.Domain\obj\Debug\net8.0\ref\CRM.Domain.dll
-C:\Users\SAEED\Desktop\example\CRM.Domain\obj\Debug\net8.0\CRM.Domain.csproj.AssemblyReference.cache

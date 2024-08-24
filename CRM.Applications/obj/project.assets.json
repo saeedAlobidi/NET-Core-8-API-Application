@@ -243,8 +243,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\SAEED\\Desktop\\example\\CRM.Domain\\CRM.Domain.csproj": {
-              "projectPath": "C:\\Users\\SAEED\\Desktop\\example\\CRM.Domain\\CRM.Domain.csproj"
+            "c:\\Users\\SAEED\\Desktop\\example\\CRM.Domain\\CRM.Domain.csproj": {
+              "projectPath": "c:\\Users\\SAEED\\Desktop\\example\\CRM.Domain\\CRM.Domain.csproj"
             }
           }
         }
