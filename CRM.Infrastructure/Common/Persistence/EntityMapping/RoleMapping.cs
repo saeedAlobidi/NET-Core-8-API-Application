@@ -16,7 +16,8 @@ public class RoleMapping : IEntityTypeConfiguration<SystemRole>
         {
             Id = 1,
 
-            Name = "SuperAdmin"
+            Name = "SuperAdmin",
+            NormalizedName="SUPERADMIN",
 
         });
 

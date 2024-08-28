@@ -1,10 +1,11 @@
 @host = http://localhost:5291
-
+@Toekn =Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjEiLCJQZXJtaXNzaW9uIjpbImxlYWQucmVhZCIsImxlYWQud3JpdGUiLCJzZXJ2aWNlLnJlYWQiLCJzZXJ2aWNlLndyaXRlIiwiYXBwbGljYXRpb24ucmVhZCIsImFwcGxpY2F0aW9uLndyaXRlIiwidXNlci5yZWFkIiwidXNlci53cml0ZSJdLCJleHAiOjE3MjUwNDg4OTIsImlzcyI6IllvdXJJc3N1ZXIiLCJhdWQiOiJZb3VyQXVkaWVuY2UifQ.IoobiCqBAmrDnFnlaHLs-mrb0byyBQQKtcK5MbUut4M
 
 
 
 POST  {{host}}/Users/v1/api/Users
 Content-Type:application/json
+Authorization: {{Toekn}}
 
 {
   
@@ -19,6 +20,7 @@ Content-Type:application/json
 
 POST  {{host}}/Users/v1/api/Users/Roles
 Content-Type:application/json
+Authorization: {{Toekn}}
 
 {
   
@@ -29,20 +31,30 @@ Content-Type:application/json
 
 ###
 
-###
-
-POST  {{host}}/Leads/v1/api/Leads
+POST  {{host}}/Users/v1/api/Users/Login
 Content-Type:application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtb2FoYW1tZWRAR21haWwuY29tIiwianRpIjoiOTIzM2IwODUtNTM0Yy00OTVjLTk1YTItNGVkNDRiN2IyOWQ0IiwiUGVybWlzc2lvbiI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNzI0NDQwNTgwLCJpc3MiOiJZb3VySXNzdWVyIiwiYXVkIjoiWW91ckF1ZGllbmNlIn0.B0RW4x9NAltwyNXwttA1lWZROLkiK4KaP5M8G8RPX9k
-
 
 {
-    "Age":30,
-    "Name":"saeed",
-    "Email":"saeed1adm@Gmail.com",
-    "Linkedin":"https://www.linkedin.com/in/saeed-mohammed-al-obidi-289082147/"
+  
+    "userName":"admin@example.com",
+    "password":"saeed!123"
      
  }
+
+
+
+###
+POST {{host}}/Leads/v1/api/Leads
+Content-Type: application/json
+Authorization: {{Toekn}}
+
+{
+  "Age": 30,
+  "Name": "Saeed",
+  "Email": "saeed1adm@gmail.com",
+  "Linkedin": "https://www.linkedin.com/in/saeed-mohammed-al-obidi-289082147/"
+}
+
 
 ###
 
@@ -51,16 +63,19 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtb2FoYW1tZ
 
 GET {{host}}/Leads/v1/api/Leads/?leadId=3
 Accept: application/json
+Authorization: {{Toekn}}
 
 ###
 //or 
 GET {{host}}/Leads/v1/api/Leads/d/1
 Accept: application/json
+Authorization: {{Toekn}}
 
 ###
 
 POST  {{host}}/Services/v1/api/Services
 Content-Type:application/json
+Authorization: {{Toekn}}
 
 {
   "name": "subscription",
@@ -71,6 +86,7 @@ Content-Type:application/json
 ###
 POST  {{host}}/Applications/v1/api/Application
 Content-Type:application/json
+Authorization: {{Toekn}}
 
 {
  "name": "Transfer the ASUS ROG G16 16-inch laptop to Saeed's address.",

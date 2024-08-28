@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "S8MHiqdMMrTaLmWCHA+3cGrG3oeBJWCz9kBIN8dPMzc=",
+  "Source": "CRM.Api",
+  "BasePath": "_content/CRM.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

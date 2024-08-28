@@ -1,0 +1,16 @@
+C:\Users\SAEED\Desktop\web\example_asp core api\CRM.Applications\bin\Debug\net8.0\CRM.Applications.deps.json
+C:\Users\SAEED\Desktop\web\example_asp core api\CRM.Applications\bin\Debug\net8.0\CRM.Applications.dll
+C:\Users\SAEED\Desktop\web\example_asp core api\CRM.Applications\bin\Debug\net8.0\CRM.Applications.pdb
+C:\Users\SAEED\Desktop\web\example_asp core api\CRM.Applications\bin\Debug\net8.0\CRM.Domain.dll
+C:\Users\SAEED\Desktop\web\example_asp core api\CRM.Applications\bin\Debug\net8.0\CRM.Domain.pdb
+C:\Users\SAEED\Desktop\web\example_asp core api\CRM.Applications\obj\Debug\net8.0\CRM.Applications.csproj.AssemblyReference.cache
+C:\Users\SAEED\Desktop\web\example_asp core api\CRM.Applications\obj\Debug\net8.0\CRM.Applications.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SAEED\Desktop\web\example_asp core api\CRM.Applications\obj\Debug\net8.0\CRM.Applications.AssemblyInfoInputs.cache
+C:\Users\SAEED\Desktop\web\example_asp core api\CRM.Applications\obj\Debug\net8.0\CRM.Applications.AssemblyInfo.cs
+C:\Users\SAEED\Desktop\web\example_asp core api\CRM.Applications\obj\Debug\net8.0\CRM.Applications.csproj.CoreCompileInputs.cache
+C:\Users\SAEED\Desktop\web\example_asp core api\CRM.Applications\obj\Debug\net8.0\CRM.Applications.sourcelink.json
+C:\Users\SAEED\Desktop\web\example_asp core api\CRM.Applications\obj\Debug\net8.0\CRM.Appl.1DE71808.Up2Date
+C:\Users\SAEED\Desktop\web\example_asp core api\CRM.Applications\obj\Debug\net8.0\CRM.Applications.dll
+C:\Users\SAEED\Desktop\web\example_asp core api\CRM.Applications\obj\Debug\net8.0\refint\CRM.Applications.dll
+C:\Users\SAEED\Desktop\web\example_asp core api\CRM.Applications\obj\Debug\net8.0\CRM.Applications.pdb
+C:\Users\SAEED\Desktop\web\example_asp core api\CRM.Applications\obj\Debug\net8.0\ref\CRM.Applications.dll
