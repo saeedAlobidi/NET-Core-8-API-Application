@@ -197,11 +197,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SAEED\\Desktop\\example\\CRM.Domain\\CRM.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\SAEED\\Desktop\\web\\example_asp core api\\CRM.Domain\\CRM.Domain.csproj",
       "projectName": "CRM.Domain",
-      "projectPath": "C:\\Users\\SAEED\\Desktop\\example\\CRM.Domain\\CRM.Domain.csproj",
+      "projectPath": "C:\\Users\\SAEED\\Desktop\\web\\example_asp core api\\CRM.Domain\\CRM.Domain.csproj",
       "packagesPath": "C:\\Users\\SAEED\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SAEED\\Desktop\\example\\CRM.Domain\\obj\\",
+      "outputPath": "C:\\Users\\SAEED\\Desktop\\web\\example_asp core api\\CRM.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

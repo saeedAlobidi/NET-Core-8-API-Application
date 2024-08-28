@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "o98r2PvtVsI=",
+  "dgSpecHash": "84dYtmAS6nk=",
   "success": true,
-  "projectFilePath": "c:\\Users\\SAEED\\Desktop\\example\\CRM.Domain\\CRM.Domain.csproj",
+  "projectFilePath": "C:\\Users\\SAEED\\Desktop\\web\\example_asp core api\\CRM.Domain\\CRM.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SAEED\\.nuget\\packages\\erroror\\1.2.1\\erroror.1.2.1.nupkg.sha512",
     "C:\\Users\\SAEED\\.nuget\\packages\\fluentvalidation\\11.9.2\\fluentvalidation.11.9.2.nupkg.sha512",

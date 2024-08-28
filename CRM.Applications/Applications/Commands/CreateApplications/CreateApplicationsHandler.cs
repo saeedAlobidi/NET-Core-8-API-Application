@@ -30,7 +30,7 @@ public class CreateApplicationsHandler : IRequestHandler<CreateApplicationsComma
         var service = await _servicesRepository.GetOneAsync(request.ServiceId,cancellationToken);
         var application = new Application();
 
-        var status = await application.AddApplication(lead, service, request.Name);
+        var status = await application.ValidateAsync(lead, service, request.Name);
         if (status.IsError)
             return status.Errors;
 

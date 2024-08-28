@@ -13,15 +13,15 @@ public class Application : Aggregation<int>
 
 
     public string name { get; set; }
-    public Leads.Lead lead { get; set; }
-    public Services.Service service { get; set; }
+    public Lead lead { get; set; }
+    public Service service { get; set; }
     public bool isDeleted = false;
 
 
 
 
 
-    public async Task<ErrorOr<Success>> AddApplication(Leads.Lead lead, Services.Service service, string name)
+    public async Task<ErrorOr<Success>> ValidateAsync(Lead lead, Service service, string name)
     {
 
 

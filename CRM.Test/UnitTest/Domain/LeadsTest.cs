@@ -20,7 +20,7 @@ public class LeadsTest : IAsyncLifetime
 
         // When
 
-        var resultStatus = await lead.AddLead();
+        var resultStatus = await lead.ValidateAsync();
 
         // Then
 
@@ -39,7 +39,7 @@ public class LeadsTest : IAsyncLifetime
 
         // When
 
-        var resultStatus = await lead.AddLead();
+        var resultStatus = await lead.ValidateAsync();
 
         // Then
 
@@ -57,7 +57,7 @@ public class LeadsTest : IAsyncLifetime
 
         // When
 
-        var resultStatus = await lead.AddLead();
+        var resultStatus = await lead.ValidateAsync();
 
         // Then
 

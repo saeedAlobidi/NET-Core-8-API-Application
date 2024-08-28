@@ -11,7 +11,7 @@ public class User:Entity<int>
     public string Name { get; set; }
     public string PasswordHash { get; set; }
     public String? linkedin { get; set; }
-    public async Task<ErrorOr<Success>> AddUser()
+    public async Task<ErrorOr<Success>> ValidateAsync()
     {
 
         var validator = new UserValidator();

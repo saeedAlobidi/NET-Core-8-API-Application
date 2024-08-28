@@ -18,7 +18,7 @@ public class Service : Entity<int>
    
 
 
-    public async Task<ErrorOr<Success>> AddService()
+    public async Task<ErrorOr<Success>> ValidateAsync()
     {
 
         var validator = new ServiceValidator();

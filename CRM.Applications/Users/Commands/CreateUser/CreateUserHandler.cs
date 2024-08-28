@@ -30,7 +30,7 @@ public class CreateUserHandler : IRequestHandler<CreateUserCommand, ErrorOr<User
         };
     
     
-        var status = await User.AddUser();
+        var status = await User.ValidateAsync();
         if (status.IsError)
             return status.Errors;
 

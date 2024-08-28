@@ -19,7 +19,7 @@ public class Lead : Entity<int>
     
     
 
-    public async Task<ErrorOr<Success>> AddLead()
+    public async Task<ErrorOr<Success>> ValidateAsync()
     {
 
         var validator = new LeadValidator(_minimumAge);

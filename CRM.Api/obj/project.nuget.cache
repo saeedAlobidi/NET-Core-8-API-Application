@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5jexBPGUtvY=",
+  "dgSpecHash": "QvUEYSuEQSU=",
   "success": true,
-  "projectFilePath": "c:\\Users\\SAEED\\Desktop\\example\\CRM.Api\\CRM.Api.csproj",
+  "projectFilePath": "C:\\Users\\SAEED\\Desktop\\web\\example_asp core api\\CRM.Api\\CRM.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SAEED\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\SAEED\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

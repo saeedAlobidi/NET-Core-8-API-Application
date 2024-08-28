@@ -18,7 +18,7 @@ public class ServicesTest : IAsyncLifetime
 
         // When
 
-        var resultStatus = await Service.AddService();
+        var resultStatus = await Service.ValidateAsync();
 
         // Then
 
@@ -37,7 +37,7 @@ public class ServicesTest : IAsyncLifetime
 
         // When
 
-        var resultStatus = await Service.AddService();
+        var resultStatus = await Service.ValidateAsync();
 
         // Then
 

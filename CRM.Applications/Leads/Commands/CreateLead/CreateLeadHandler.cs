@@ -28,7 +28,7 @@ public class CreateLeadHandler : IRequestHandler<CreateLeadCommand, ErrorOr<Doma
             linkedin = request.Linkedin
         };
         
-        var status = await lead.AddLead();
+        var status = await lead.ValidateAsync();
         if (status.IsError)
             return status.Errors;
 
