@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "/Gp2mGYKIA8=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Saeed\\Desktop\\my project github\\NET-Core-8-API-Application\\Common\\Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Saeed\\.nuget\\packages\\fluentvalidation\\11.10.0\\fluentvalidation.11.10.0.nupkg.sha512",
+    "C:\\Users\\Saeed\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.1\\microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

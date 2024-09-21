@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace CRM.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate1 : Migration
+    public partial class InitialCreate2 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -222,12 +222,12 @@ namespace CRM.Infrastructure.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { 1, null, "SuperAdmin", null });
+                values: new object[] { 1, null, "SuperAdmin", "SUPERADMIN" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "Name", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName", "linkedin" },
-                values: new object[] { 1, 0, "0b5997da-df85-466f-b234-425fddeb27e1", "admin@example.com", false, false, null, "Super admin", null, null, "AQAAAAIAAYagAAAAEGq0wdn0m3eQDTEwsh5DbTwxSZWA3vXkTxQrtfua/l9r9mXgGzumcZDguuejX0+kqg==", null, false, null, false, "admin@example.com", null });
+                values: new object[] { 1, 0, "7b2abd71-7277-4a66-a748-78f9d3bbecc9", "admin@example.com", true, false, null, "Super admin", "ADMIN@EXAMPLE.COM", null, "AQAAAAIAAYagAAAAELcpJ0WCYNj2tfYZHFCxSI9oGfzZCMPi6WcChUOZvzgk0GuSBBBYfCLMK9S1PcFZKw==", null, false, null, false, "admin@example.com", null });
 
             migrationBuilder.InsertData(
                 table: "AspNetRoleClaims",

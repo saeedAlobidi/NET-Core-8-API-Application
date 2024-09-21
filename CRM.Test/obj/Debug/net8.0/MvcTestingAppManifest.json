@@ -1,6 +1,7 @@
 {
-  "CRM.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\SAEED\\Desktop\\web\\example_asp core api\\CRM.Api",
-  "CRM.Applications, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\SAEED\\Desktop\\web\\example_asp core api\\CRM.Applications",
-  "CRM.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\SAEED\\Desktop\\web\\example_asp core api\\CRM.Domain",
-  "CRM.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\SAEED\\Desktop\\web\\example_asp core api\\CRM.Infrastructure"
+  "Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Saeed\\Desktop\\my project github\\NET-Core-8-API-Application\\Common",
+  "CRM.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Saeed\\Desktop\\my project github\\NET-Core-8-API-Application\\CRM.Api",
+  "CRM.Applications, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Saeed\\Desktop\\my project github\\NET-Core-8-API-Application\\CRM.Applications",
+  "CRM.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Saeed\\Desktop\\my project github\\NET-Core-8-API-Application\\CRM.Domain",
+  "CRM.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Saeed\\Desktop\\my project github\\NET-Core-8-API-Application\\CRM.Infrastructure"
 }

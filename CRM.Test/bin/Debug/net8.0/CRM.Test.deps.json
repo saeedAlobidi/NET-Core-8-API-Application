@@ -419,11 +419,11 @@
           "lib/net6.0/FluentAssertions.dll": {}
         }
       },
-      "FluentValidation/11.9.2": {
+      "FluentValidation/11.10.0": {
         "runtime": {
           "lib/net8.0/FluentValidation.dll": {
             "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.9.2.0"
+            "fileVersion": "11.10.0.0"
           }
         },
         "compile": {
@@ -2421,10 +2421,23 @@
         }
       },
       "xunit.runner.visualstudio/2.4.5": {},
+      "Common/1.0.0": {
+        "dependencies": {
+          "FluentValidation": "11.10.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1"
+        },
+        "runtime": {
+          "Common.dll": {}
+        },
+        "compile": {
+          "Common.dll": {}
+        }
+      },
       "CRM.Api/1.0.0": {
         "dependencies": {
           "CRM.Applications": "1.0.0",
           "CRM.Infrastructure": "1.0.0",
+          "Common": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "8.0.7",
           "Swashbuckle.AspNetCore": "6.4.0"
         },
@@ -2451,7 +2464,7 @@
       "CRM.Domain/1.0.0": {
         "dependencies": {
           "ErrorOr": "1.2.1",
-          "FluentValidation": "11.9.2",
+          "FluentValidation": "11.10.0",
           "MediatR": "12.4.0"
         },
         "runtime": {
@@ -2464,6 +2477,7 @@
       "CRM.Infrastructure/1.0.0": {
         "dependencies": {
           "CRM.Applications": "1.0.0",
+          "Common": "1.0.0",
           "ErrorOr": "1.2.1",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.8",
           "Microsoft.AspNetCore.Identity": "2.2.0",
@@ -4320,12 +4334,12 @@
       "path": "fluentassertions/6.12.0",
       "hashPath": "fluentassertions.6.12.0.nupkg.sha512"
     },
-    "FluentValidation/11.9.2": {
+    "FluentValidation/11.10.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-XeHp9LvFvu1fsQ/NvDCymV02GOCB1nz7ZUhfpI3uMhCcHTkV1K5bMkv+Nc/kuNYyAsX5+5bcmUanIEMd5QN+Eg==",
-      "path": "fluentvalidation/11.9.2",
-      "hashPath": "fluentvalidation.11.9.2.nupkg.sha512"
+      "sha512": "sha512-qsJGSJDdZ8qiG+lVJ70PZfJHcEdq8UQZ/tZDXoj78/iHKG6lVKtMJsD11zyyv/IPc7rwqGqnFoFLTNzpo3IPYg==",
+      "path": "fluentvalidation/11.10.0",
+      "hashPath": "fluentvalidation.11.10.0.nupkg.sha512"
     },
     "MediatR/12.4.0": {
       "type": "package",
@@ -5670,6 +5684,11 @@
       "sha512": "sha512-OwHamvBdUKgqsXfBzWiCW/O98BTx81UKzx2bieIOQI7CZFE5NEQZGi8PBQGIKawDW96xeRffiNf20SjfC0x9hw==",
       "path": "xunit.runner.visualstudio/2.4.5",
       "hashPath": "xunit.runner.visualstudio.2.4.5.nupkg.sha512"
+    },
+    "Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "CRM.Api/1.0.0": {
       "type": "project",

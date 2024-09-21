@@ -6,6 +6,7 @@ namespace CRM.Applications;
 
 public static class DependencyInjection
 {
+  
   public static IServiceCollection addApplication(this IServiceCollection services)
     {
         

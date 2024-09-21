@@ -75,7 +75,7 @@
           }
         }
       },
-      "FluentValidation/11.9.2": {
+      "FluentValidation/11.10.0": {
         "type": "package",
         "compile": {
           "lib/net8.0/FluentValidation.dll": {
@@ -3731,12 +3731,27 @@
           "build/netcoreapp3.1/xunit.runner.visualstudio.props": {}
         }
       },
+      "Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "FluentValidation": "11.10.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1"
+        },
+        "compile": {
+          "bin/placeholder/Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.dll": {}
+        }
+      },
       "CRM.Api/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "CRM.Applications": "1.0.0",
           "CRM.Infrastructure": "1.0.0",
+          "Common": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "8.0.7",
           "Swashbuckle.AspNetCore": "6.4.0"
         },
@@ -3785,6 +3800,7 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "CRM.Applications": "1.0.0",
+          "Common": "1.0.0",
           "ErrorOr": "1.2.1",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.8",
           "Microsoft.AspNetCore.Identity": "2.2.0",
@@ -3886,16 +3902,16 @@
         "lib/netstandard2.1/FluentAssertions.xml"
       ]
     },
-    "FluentValidation/11.9.2": {
-      "sha512": "XeHp9LvFvu1fsQ/NvDCymV02GOCB1nz7ZUhfpI3uMhCcHTkV1K5bMkv+Nc/kuNYyAsX5+5bcmUanIEMd5QN+Eg==",
+    "FluentValidation/11.10.0": {
+      "sha512": "qsJGSJDdZ8qiG+lVJ70PZfJHcEdq8UQZ/tZDXoj78/iHKG6lVKtMJsD11zyyv/IPc7rwqGqnFoFLTNzpo3IPYg==",
       "type": "package",
-      "path": "fluentvalidation/11.9.2",
+      "path": "fluentvalidation/11.10.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
         "fluent-validation-icon.png",
-        "fluentvalidation.11.9.2.nupkg.sha512",
+        "fluentvalidation.11.10.0.nupkg.sha512",
         "fluentvalidation.nuspec",
         "lib/net5.0/FluentValidation.dll",
         "lib/net5.0/FluentValidation.xml",
@@ -10537,6 +10553,11 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
+    "Common/1.0.0": {
+      "type": "project",
+      "path": "../Common/Common.csproj",
+      "msbuildProject": "../Common/Common.csproj"
+    },
     "CRM.Api/1.0.0": {
       "type": "project",
       "path": "../CRM.Api/CRM.Api.csproj",
@@ -10572,50 +10593,41 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\SAEED\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Saeed\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SAEED\\Desktop\\web\\example_asp core api\\CRM.Test\\CRM.Test.csproj",
+      "projectUniqueName": "C:\\Users\\Saeed\\Desktop\\my project github\\NET-Core-8-API-Application\\CRM.Test\\CRM.Test.csproj",
       "projectName": "CRM.Test",
-      "projectPath": "C:\\Users\\SAEED\\Desktop\\web\\example_asp core api\\CRM.Test\\CRM.Test.csproj",
-      "packagesPath": "C:\\Users\\SAEED\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SAEED\\Desktop\\web\\example_asp core api\\CRM.Test\\obj\\",
+      "projectPath": "C:\\Users\\Saeed\\Desktop\\my project github\\NET-Core-8-API-Application\\CRM.Test\\CRM.Test.csproj",
+      "packagesPath": "C:\\Users\\Saeed\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Saeed\\Desktop\\my project github\\NET-Core-8-API-Application\\CRM.Test\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\SAEED\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Saeed\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\SAEED\\Desktop\\web\\example_asp core api\\CRM.Api\\CRM.Api.csproj": {
-              "projectPath": "C:\\Users\\SAEED\\Desktop\\web\\example_asp core api\\CRM.Api\\CRM.Api.csproj"
+            "C:\\Users\\Saeed\\Desktop\\my project github\\NET-Core-8-API-Application\\CRM.Api\\CRM.Api.csproj": {
+              "projectPath": "C:\\Users\\Saeed\\Desktop\\my project github\\NET-Core-8-API-Application\\CRM.Api\\CRM.Api.csproj"
             },
-            "C:\\Users\\SAEED\\Desktop\\web\\example_asp core api\\CRM.Applications\\CRM.Applications.csproj": {
-              "projectPath": "C:\\Users\\SAEED\\Desktop\\web\\example_asp core api\\CRM.Applications\\CRM.Applications.csproj"
+            "C:\\Users\\Saeed\\Desktop\\my project github\\NET-Core-8-API-Application\\CRM.Applications\\CRM.Applications.csproj": {
+              "projectPath": "C:\\Users\\Saeed\\Desktop\\my project github\\NET-Core-8-API-Application\\CRM.Applications\\CRM.Applications.csproj"
             },
-            "C:\\Users\\SAEED\\Desktop\\web\\example_asp core api\\CRM.Domain\\CRM.Domain.csproj": {
-              "projectPath": "C:\\Users\\SAEED\\Desktop\\web\\example_asp core api\\CRM.Domain\\CRM.Domain.csproj"
+            "C:\\Users\\Saeed\\Desktop\\my project github\\NET-Core-8-API-Application\\CRM.Domain\\CRM.Domain.csproj": {
+              "projectPath": "C:\\Users\\Saeed\\Desktop\\my project github\\NET-Core-8-API-Application\\CRM.Domain\\CRM.Domain.csproj"
             },
-            "C:\\Users\\SAEED\\Desktop\\web\\example_asp core api\\CRM.Infrastructure\\CRM.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\SAEED\\Desktop\\web\\example_asp core api\\CRM.Infrastructure\\CRM.Infrastructure.csproj"
+            "C:\\Users\\Saeed\\Desktop\\my project github\\NET-Core-8-API-Application\\CRM.Infrastructure\\CRM.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Saeed\\Desktop\\my project github\\NET-Core-8-API-Application\\CRM.Infrastructure\\CRM.Infrastructure.csproj"
             }
           }
         }

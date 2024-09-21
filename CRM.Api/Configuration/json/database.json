@@ -1,0 +1,3 @@
+{
+    "connection": "Data Source=localhost; Initial Catalog=CRMDB; User Id=sa; Password=mms!Gocardless1992; TrustServerCertificate=True;"
+}

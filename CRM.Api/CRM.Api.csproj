@@ -24,6 +24,8 @@
     <ProjectReference Include="..\CRM.Infrastructure\CRM.Infrastructure.csproj" />
     
     <ProjectReference Include="..\CRM.Applications\CRM.Applications.csproj" />
+    
+    <ProjectReference Include="..\Common\Common.csproj" />
   </ItemGroup>
 
 </Project>

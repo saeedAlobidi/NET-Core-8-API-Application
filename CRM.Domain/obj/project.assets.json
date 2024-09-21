@@ -190,33 +190,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\SAEED\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Saeed\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SAEED\\Desktop\\web\\example_asp core api\\CRM.Domain\\CRM.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Saeed\\Desktop\\my project github\\NET-Core-8-API-Application\\CRM.Domain\\CRM.Domain.csproj",
       "projectName": "CRM.Domain",
-      "projectPath": "C:\\Users\\SAEED\\Desktop\\web\\example_asp core api\\CRM.Domain\\CRM.Domain.csproj",
-      "packagesPath": "C:\\Users\\SAEED\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SAEED\\Desktop\\web\\example_asp core api\\CRM.Domain\\obj\\",
+      "projectPath": "C:\\Users\\Saeed\\Desktop\\my project github\\NET-Core-8-API-Application\\CRM.Domain\\CRM.Domain.csproj",
+      "packagesPath": "C:\\Users\\Saeed\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Saeed\\Desktop\\my project github\\NET-Core-8-API-Application\\CRM.Domain\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\SAEED\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Saeed\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

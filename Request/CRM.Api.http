@@ -1,6 +1,5 @@
 @host = http://localhost:5291
-@Toekn =Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjEiLCJQZXJtaXNzaW9uIjpbImxlYWQucmVhZCIsImxlYWQud3JpdGUiLCJzZXJ2aWNlLnJlYWQiLCJzZXJ2aWNlLndyaXRlIiwiYXBwbGljYXRpb24ucmVhZCIsImFwcGxpY2F0aW9uLndyaXRlIiwidXNlci5yZWFkIiwidXNlci53cml0ZSJdLCJleHAiOjE3MjUwNDg4OTIsImlzcyI6IllvdXJJc3N1ZXIiLCJhdWQiOiJZb3VyQXVkaWVuY2UifQ.IoobiCqBAmrDnFnlaHLs-mrb0byyBQQKtcK5MbUut4M
-
+@Toekn =Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjEiLCJQZXJtaXNzaW9uIjpbImxlYWQucmVhZCIsImxlYWQud3JpdGUiLCJzZXJ2aWNlLnJlYWQiLCJzZXJ2aWNlLndyaXRlIiwiYXBwbGljYXRpb24ucmVhZCIsImFwcGxpY2F0aW9uLndyaXRlIiwidXNlci5yZWFkIiwidXNlci53cml0ZSJdLCJleHAiOjE3MjY2NzU1MTMsImlzcyI6IllvdXJJc3N1ZXIiLCJhdWQiOiJZb3VyQXVkaWVuY2UifQ.JDSoG8mt8eysMkaJCQ5j3aCMxYR0_i0xV09uRyluY_Y
 
 
 POST  {{host}}/Users/v1/api/Users
@@ -49,7 +48,7 @@ Content-Type: application/json
 Authorization: {{Toekn}}
 
 {
-  "Age": 30,
+  "Age": 32,
   "Name": "Saeed",
   "Email": "saeed1adm@gmail.com",
   "Linkedin": "https://www.linkedin.com/in/saeed-mohammed-al-obidi-289082147/"

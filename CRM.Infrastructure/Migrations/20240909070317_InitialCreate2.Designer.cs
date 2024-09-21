@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CRM.Infrastructure.Migrations
 {
     [DbContext(typeof(CRMManagementDbContext))]
-    [Migration("20240824174554_InitialCreate1")]
-    partial class InitialCreate1
+    [Migration("20240909070317_InitialCreate2")]
+    partial class InitialCreate2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -133,7 +133,8 @@ namespace CRM.Infrastructure.Migrations
                         new
                         {
                             Id = 1,
-                            Name = "SuperAdmin"
+                            Name = "SuperAdmin",
+                            NormalizedName = "SUPERADMIN"
                         });
                 });
 
@@ -216,12 +217,13 @@ namespace CRM.Infrastructure.Migrations
                         {
                             Id = 1,
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "0b5997da-df85-466f-b234-425fddeb27e1",
+                            ConcurrencyStamp = "7b2abd71-7277-4a66-a748-78f9d3bbecc9",
                             Email = "admin@example.com",
-                            EmailConfirmed = false,
+                            EmailConfirmed = true,
                             LockoutEnabled = false,
                             Name = "Super admin",
-                            PasswordHash = "AQAAAAIAAYagAAAAEGq0wdn0m3eQDTEwsh5DbTwxSZWA3vXkTxQrtfua/l9r9mXgGzumcZDguuejX0+kqg==",
+                            NormalizedEmail = "ADMIN@EXAMPLE.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAELcpJ0WCYNj2tfYZHFCxSI9oGfzZCMPi6WcChUOZvzgk0GuSBBBYfCLMK9S1PcFZKw==",
                             PhoneNumberConfirmed = false,
                             TwoFactorEnabled = false,
                             UserName = "admin@example.com"

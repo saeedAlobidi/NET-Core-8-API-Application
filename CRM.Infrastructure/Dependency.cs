@@ -13,8 +13,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
 
@@ -22,9 +22,14 @@ namespace CRM.Infrastructure;
 
 public static class DependencyInjection
 {
-  public static IServiceCollection addInfrastructure(this IServiceCollection services, IConfiguration configuration)
-  {
 
+  
+
+  public static IServiceCollection addInfrastructure(this IServiceCollection services, IOptions<databaseOption> dbOptions, IOptions<jwtOption> jwtOptions)
+  {
+    
+
+  
     //epository
     services.AddScoped<ILeadRepository, LeadRepository>();
     services.AddScoped<IServicesRepository, ServicesRepository>();
@@ -40,7 +45,7 @@ public static class DependencyInjection
     //database context
     services.AddDbContext<CRMManagementDbContext>(options =>
  {
-   var connectionString = "Data Source=localhost; Initial Catalog=CRMDB; User Id=mms; Password=mms; TrustServerCertificate=True;";
+   var connectionString = dbOptions.Value.connection;
    options.UseSqlServer(connectionString);
    //.LogTo(Console.WriteLine);
 
@@ -72,15 +77,15 @@ public static class DependencyInjection
         ValidateAudience = true,
         ValidateLifetime = true,
         ValidateIssuerSigningKey = true,
-        ValidIssuer = configuration["Jwt:Issuer"],
-        ValidAudience = configuration["Jwt:Audience"],
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:Key"]))
+        ValidIssuer = jwtOptions.Value.Issuer,
+        ValidAudience = jwtOptions.Value.Audience,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtOptions.Value.Key))
       };
     });
 
     services.AddSingleton<IAuthorizationPolicyProvider, PermissionPolicyProvider>();
     services.AddScoped<IAuthorizationHandler, PermissionAuthorizationHandler>();
-     services.AddScoped<JwtToken>();
+    services.AddScoped<JwtToken>();
 
     return services;
   }

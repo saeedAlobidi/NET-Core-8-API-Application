@@ -130,7 +130,8 @@ namespace CRM.Infrastructure.Migrations
                         new
                         {
                             Id = 1,
-                            Name = "SuperAdmin"
+                            Name = "SuperAdmin",
+                            NormalizedName = "SUPERADMIN"
                         });
                 });
 
@@ -213,13 +214,13 @@ namespace CRM.Infrastructure.Migrations
                         {
                             Id = 1,
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "5f8621bf-23d9-4a25-8349-d8934da72982",
+                            ConcurrencyStamp = "7b2abd71-7277-4a66-a748-78f9d3bbecc9",
                             Email = "admin@example.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             Name = "Super admin",
                             NormalizedEmail = "ADMIN@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEB+tcayqp2o5w7fjXT3hqVWe5lzLaKSOcnvWALyr2SQ0R2N6CLUim5kY1l33urYc5Q==",
+                            PasswordHash = "AQAAAAIAAYagAAAAELcpJ0WCYNj2tfYZHFCxSI9oGfzZCMPi6WcChUOZvzgk0GuSBBBYfCLMK9S1PcFZKw==",
                             PhoneNumberConfirmed = false,
                             TwoFactorEnabled = false,
                             UserName = "admin@example.com"

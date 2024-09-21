@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CRM.Domain
-build_property.ProjectDir = C:\Users\SAEED\Desktop\web\example_asp core api\CRM.Domain\
+build_property.ProjectDir = C:\Users\Saeed\Desktop\my project github\NET-Core-8-API-Application\CRM.Domain\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
