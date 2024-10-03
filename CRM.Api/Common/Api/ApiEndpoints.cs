@@ -22,6 +22,14 @@ public static class ApiEndpoints
 
   }
 
+  public static class Countries
+  {
+    private const string Base = $"{ApiBase}/Countries";
+    public const string Create = Base;
+    public const string Get = $"{Base}/";
+    public const string GetById = $"{Base}/{{id}}";
+
+  }
 
   public static class Leads
   {

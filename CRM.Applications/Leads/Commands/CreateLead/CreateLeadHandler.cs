@@ -22,10 +22,10 @@ public class CreateLeadHandler : IRequestHandler<CreateLeadCommand, ErrorOr<Doma
     {
         Lead lead = new()
         {
-            age = request.Age,
-            name = request.Name,
-            email = request.Email,
-            linkedin = request.Linkedin
+            // age = request.Age,
+            // name = request.Name,
+            // email = request.Email,
+            // linkedin = request.Linkedin
         };
         
         var status = await lead.ValidateAsync();

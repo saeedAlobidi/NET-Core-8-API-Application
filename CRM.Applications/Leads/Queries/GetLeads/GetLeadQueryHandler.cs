@@ -14,14 +14,17 @@ public class GetLeadQueryHandler : IRequestHandler<GetLeadQuery, ErrorOr<Lead>>
     private readonly IUnitOfWork _unitOfWork;
     public GetLeadQueryHandler(ILeadRepository leadRepository, IUnitOfWork unitOfWork)
     {
-        _leadRepository = leadRepository;
-        _unitOfWork = unitOfWork;
+        // _leadRepository = leadRepository;
+        // _unitOfWork = unitOfWork;
     }
 
     public async Task<ErrorOr<Lead>> Handle(GetLeadQuery request, CancellationToken cancellationToken)
     {
-       return await _leadRepository.GetOneAsync(request.LeadId,cancellationToken);
-        
+
+
+        //   return await _leadRepository.GetOneAsync(request.LeadId,cancellationToken);
+
+        return new Lead();
 
     }
 

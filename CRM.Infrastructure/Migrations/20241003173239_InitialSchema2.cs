@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace CRM.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate2 : Migration
+    public partial class InitialSchema2 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -57,19 +57,40 @@ namespace CRM.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Leads",
+                name: "countries",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    age = table.Column<int>(type: "int", nullable: false),
-                    name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    linkedin = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    CountryCode = table.Column<string>(type: "nvarchar(450)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Leads", x => x.Id);
+                    table.PrimaryKey("PK_countries", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "leadSources",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_leadSources", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "leadStatuse",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_leadStatuse", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -193,6 +214,112 @@ namespace CRM.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "translatedCountries",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LanguageCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SourceId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_translatedCountries", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_translatedCountries_countries_SourceId",
+                        column: x => x.SourceId,
+                        principalTable: "countries",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "translatedLeadSource",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LanguageCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SourceId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_translatedLeadSource", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_translatedLeadSource_leadSources_SourceId",
+                        column: x => x.SourceId,
+                        principalTable: "leadSources",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Leads",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Phone = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Mobile = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LeadSourceId = table.Column<int>(type: "int", nullable: false),
+                    StatusId = table.Column<int>(type: "int", nullable: false),
+                    CountryId = table.Column<int>(type: "int", nullable: false),
+                    City = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ZipCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Street = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Leads", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Leads_countries_CountryId",
+                        column: x => x.CountryId,
+                        principalTable: "countries",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Leads_leadSources_LeadSourceId",
+                        column: x => x.LeadSourceId,
+                        principalTable: "leadSources",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Leads_leadStatuse_StatusId",
+                        column: x => x.StatusId,
+                        principalTable: "leadStatuse",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "translatedLeadStatuses",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LanguageCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SourceId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_translatedLeadStatuses", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_translatedLeadStatuses_leadStatuse_SourceId",
+                        column: x => x.SourceId,
+                        principalTable: "leadStatuse",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Applications",
                 columns: table => new
                 {
@@ -227,7 +354,7 @@ namespace CRM.Infrastructure.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "Name", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName", "linkedin" },
-                values: new object[] { 1, 0, "7b2abd71-7277-4a66-a748-78f9d3bbecc9", "admin@example.com", true, false, null, "Super admin", "ADMIN@EXAMPLE.COM", null, "AQAAAAIAAYagAAAAELcpJ0WCYNj2tfYZHFCxSI9oGfzZCMPi6WcChUOZvzgk0GuSBBBYfCLMK9S1PcFZKw==", null, false, null, false, "admin@example.com", null });
+                values: new object[] { 1, 0, "e10c984c-539d-4cc5-9359-ab13a6a210f5", "admin@example.com", true, false, null, "Super admin", "ADMIN@EXAMPLE.COM", null, "AQAAAAIAAYagAAAAECxiF8T7rZOMHNx/tEp0sUIIDAjbeQIMuljigf6A5JEWm210YkUY9Ywf1UcYWxZ0ZQ==", null, false, null, false, "admin@example.com", null });
 
             migrationBuilder.InsertData(
                 table: "AspNetRoleClaims",
@@ -297,6 +424,42 @@ namespace CRM.Infrastructure.Migrations
                 column: "NormalizedUserName",
                 unique: true,
                 filter: "[NormalizedUserName] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_countries_CountryCode",
+                table: "countries",
+                column: "CountryCode",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Leads_CountryId",
+                table: "Leads",
+                column: "CountryId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Leads_LeadSourceId",
+                table: "Leads",
+                column: "LeadSourceId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Leads_StatusId",
+                table: "Leads",
+                column: "StatusId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_translatedCountries_SourceId",
+                table: "translatedCountries",
+                column: "SourceId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_translatedLeadSource_SourceId",
+                table: "translatedLeadSource",
+                column: "SourceId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_translatedLeadStatuses_SourceId",
+                table: "translatedLeadStatuses",
+                column: "SourceId");
         }
 
         /// <inheritdoc />
@@ -321,6 +484,15 @@ namespace CRM.Infrastructure.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "translatedCountries");
+
+            migrationBuilder.DropTable(
+                name: "translatedLeadSource");
+
+            migrationBuilder.DropTable(
+                name: "translatedLeadStatuses");
+
+            migrationBuilder.DropTable(
                 name: "Leads");
 
             migrationBuilder.DropTable(
@@ -331,6 +503,15 @@ namespace CRM.Infrastructure.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "countries");
+
+            migrationBuilder.DropTable(
+                name: "leadSources");
+
+            migrationBuilder.DropTable(
+                name: "leadStatuse");
         }
     }
 }

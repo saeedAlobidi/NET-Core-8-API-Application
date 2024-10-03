@@ -473,6 +473,9 @@ C:\Users\Saeed\Desktop\my project github\NET-Core-8-API-Application\CRM.Test\bin
 C:\Users\Saeed\Desktop\my project github\NET-Core-8-API-Application\CRM.Test\bin\Debug\net8.0\CRM.Api.runtimeconfig.json
 C:\Users\Saeed\Desktop\my project github\NET-Core-8-API-Application\CRM.Test\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\Saeed\Desktop\my project github\NET-Core-8-API-Application\CRM.Test\bin\Debug\net8.0\appsettings.json
+C:\Users\Saeed\Desktop\my project github\NET-Core-8-API-Application\CRM.Test\bin\Debug\net8.0\Configuration\json\database.Development.json
+C:\Users\Saeed\Desktop\my project github\NET-Core-8-API-Application\CRM.Test\bin\Debug\net8.0\Configuration\json\database.json
+C:\Users\Saeed\Desktop\my project github\NET-Core-8-API-Application\CRM.Test\bin\Debug\net8.0\Configuration\json\jwt.json
 C:\Users\Saeed\Desktop\my project github\NET-Core-8-API-Application\CRM.Test\bin\Debug\net8.0\CRM.Api.exe
 C:\Users\Saeed\Desktop\my project github\NET-Core-8-API-Application\CRM.Test\bin\Debug\net8.0\testhost.exe
 C:\Users\Saeed\Desktop\my project github\NET-Core-8-API-Application\CRM.Test\bin\Debug\net8.0\MvcTestingAppManifest.json

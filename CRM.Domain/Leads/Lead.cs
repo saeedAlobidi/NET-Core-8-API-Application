@@ -1,28 +1,38 @@
 using ErrorOr;
 using CRM.Domain.Common;
 using CRM.Domain.Common.DomainEvent;
+using System.Runtime.CompilerServices;
 
 namespace CRM.Domain.Leads;
 
 //plz dont use Guid is not sufficiant for database
-public class Lead : Entity<int>
+public class Lead : Aggregation<int>
 {
 
-    private readonly int _minimumAge = 18;
-    public int age { get; set; }
-    public String name { get; set; }
-    public String email { get; set; }
-    public String linkedin { get; set; }
-    public bool isCustomer = false;
-    public bool isDeleted = false;
 
-    
-    
+    /*Lead Information*/
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public string Title { get; set; }
+    public string Email { get; set; }
+    public string Phone { get; set; }
+    public string Mobile { get; set; }
+    public LeadSource LeadSource { get; set; }
+    public LeadStatus Status { get; set; }
+
+    /* Address Information */
+    public Countries Country { get; set; }
+    public string City { get; set; }
+    public string ZipCode { get; set; }
+    public string Street { get; set; }
+
+    /* Description Information */
+    public string Description { get; set; }
 
     public async Task<ErrorOr<Success>> ValidateAsync()
     {
 
-        var validator = new LeadValidator(_minimumAge);
+        var validator = new LeadValidator();
         var validatorResult = await validator.ValidateAsync(this);
 
         if (!validatorResult.IsValid)
@@ -32,14 +42,8 @@ public class Lead : Entity<int>
 
     }
 
-    public ErrorOr<Success> deleteLead()
-    {
-        this.isDeleted = true;
-        _domainEvents.Add(new ApplicationDeleteEvent(this.Id));
-        return Result.Success;
-
-    }
-
+    
 }
+
 
 

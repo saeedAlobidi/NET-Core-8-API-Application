@@ -23,18 +23,21 @@ namespace CRM.Infrastructure;
 public static class DependencyInjection
 {
 
-  
+
 
   public static IServiceCollection addInfrastructure(this IServiceCollection services, IOptions<databaseOption> dbOptions, IOptions<jwtOption> jwtOptions)
   {
-    
 
-  
-    //epository
+
+
+    //Repository
     services.AddScoped<ILeadRepository, LeadRepository>();
+    services.AddScoped<ICountriesRepository, CountriesRepository>();
     services.AddScoped<IServicesRepository, ServicesRepository>();
     services.AddScoped<IApplicationsRepository, ApplicationRepository>();
     services.AddScoped<IUserRepository, UserRepository>();
+    services.AddScoped<ILeadStatusRepository, LeadStatusRepository>();
+    services.AddScoped<ILeadSourcesRepository, LeadSourcesRepository>();
 
     services.AddScoped(typeof(GenericRepository<>));
 
@@ -46,8 +49,8 @@ public static class DependencyInjection
     services.AddDbContext<CRMManagementDbContext>(options =>
  {
    var connectionString = dbOptions.Value.connection;
-   options.UseSqlServer(connectionString);
-   //.LogTo(Console.WriteLine);
+   options.UseSqlServer(connectionString)
+   .LogTo(Console.WriteLine);
 
 
  });

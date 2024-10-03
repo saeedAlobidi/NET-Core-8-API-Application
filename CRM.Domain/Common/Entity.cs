@@ -4,6 +4,7 @@ public abstract class Entity<T>
 {
 
     public T Id { get; set; }
+    public bool active = true;
     protected readonly List<IDomainEvent> _domainEvents = [];
     protected Entity(T Id) => this.Id = Id;
 
@@ -19,7 +20,7 @@ public abstract class Entity<T>
 
     public override bool Equals(object? obj)
     {
-        return (obj!=null && this.GetType == obj.GetType && ((Entity<T>)obj).Id.Equals(Id));
+        return (obj != null && this.GetType == obj.GetType && ((Entity<T>)obj).Id.Equals(Id));
     }
     public override int GetHashCode()
     {

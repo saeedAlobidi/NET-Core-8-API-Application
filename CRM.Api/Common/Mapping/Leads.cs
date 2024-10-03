@@ -16,11 +16,11 @@ public static class Leads
     }
 
     
-    public static CreateLeadResponse MapToResponse(this Lead lead)
-    {
-        return new CreateLeadResponse(Id: lead.Id, Age: lead.age, Name: lead.name, Email: lead.email, Linkedin: lead.linkedin);
+    // public static CreateLeadResponse MapToResponse(this Lead lead)
+    // {
+    //     return new CreateLeadResponse(Id: lead.Id, Age: lead.age, Name: lead.name, Email: lead.email, Linkedin: lead.linkedin);
 
-    }
+    // }
 
  
 }

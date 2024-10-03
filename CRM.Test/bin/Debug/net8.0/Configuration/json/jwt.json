@@ -1,0 +1,8 @@
+{
+    "Jwt": {
+        "Key": "bXlTdXBlclNlY3JldEtleUFkZGVkU2VjdXJlbHk",
+        "Issuer": "YourIssuer",
+        "Audience": "YourAudience",
+        "ExpireMinutes": 3000
+      }
+}

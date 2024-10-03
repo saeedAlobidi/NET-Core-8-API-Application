@@ -22,8 +22,18 @@ public class CRMManagementDbContext : IdentityDbContext<SystemUser, SystemRole, 
        : base(options)
     {
     }
-    public DbSet<Domain.Leads.Lead> Leads { get; set; }
-    public DbSet<Domain.Services.Service> Services { get; set; }
+    public DbSet<Lead> Leads { get; set; }
+    public DbSet<LeadSource> leadSources { get; set; }
+    public DbSet<TranslatedLeadSource> translatedLeadSource { get; set; }
+
+    public DbSet<LeadStatus> leadStatuse { get; set; }
+    public DbSet<TranslatedLeadStatus> translatedLeadStatuses { get; set; }
+
+    public DbSet<Countries> countries { get; set; }
+    public DbSet<TranslatedCountries>  translatedCountries { get; set; }
+
+
+    public DbSet<Service> Services { get; set; }
     public DbSet<Domain.Applications.Application> Applications { get; set; }
 
 

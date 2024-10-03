@@ -13,7 +13,7 @@ namespace CRM.Api.Controllers
       [ApiController]
       [Route("[controller]")]
       public class LeadsController : ApiController
-      {     
+      {
             public LeadsController(ISender mediatR) : base(mediatR)
             {
             }
@@ -27,8 +27,9 @@ namespace CRM.Api.Controllers
                   var command = request.MapToLeadsCommand();
                   var createLeadResult = await _mediatR.Send(command);
 
-                  return createLeadResult.Match(lead => Created($"{ApiEndpoints.Leads.Get}?{lead.Id}", lead.MapToResponse()), Problem);
+                  //  return createLeadResult.Match(lead => Created($"{ApiEndpoints.Leads.Get}?{lead.Id}", lead.MapToResponse()), Problem);
 
+                  return null;
             }
 
 

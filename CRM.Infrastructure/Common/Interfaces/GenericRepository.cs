@@ -18,6 +18,7 @@ namespace CRM.Infrastructure.Common.Interfaces
         }
 
         public IQueryable<T> GetQueryable => this._ctx.Set<T>().AsNoTracking();
+        public IQueryable<T> GetForUpdateQueryable => this._ctx.Set<T>();
 
         public async Task<T> AddAsync(T entity, CancellationToken token = default)
         {
@@ -41,7 +42,7 @@ namespace CRM.Infrastructure.Common.Interfaces
             }
         }
 
-        public async Task UpdateAsync(T entity,CancellationToken token = default)
+        public async Task UpdateAsync(T entity, CancellationToken token = default)
         {
             await Task.Run(() => this._ctx.Entry(entity).CurrentValues.SetValues(entity), token);
 
@@ -58,6 +59,16 @@ namespace CRM.Infrastructure.Common.Interfaces
                 .ToListAsync(token);
         }
 
+        public async Task<List<TResult>> GetAllAsyncforUpdate<TResult>(
+                  Expression<Func<T, bool>> predicate,
+                  Func<T, TResult> selector,
+                  CancellationToken token = default)
+        {
+            return await this.GetForUpdateQueryable
+                .Where(predicate)
+                .Select(a => selector(a))
+                .ToListAsync(token);
+        }
         public async Task<TResult> GetOneAsync<TResult>(
             Expression<Func<T, bool>> predicate,
             Expression<Func<T, TResult>> selector,
@@ -67,6 +78,23 @@ namespace CRM.Infrastructure.Common.Interfaces
                 .Where(predicate)
                 .Select(selector)
                 .FirstOrDefaultAsync(token);
+        }
+        public async Task<TResult> GetOneAsyncForUpdate<TResult>(
+                Expression<Func<T, bool>> predicate,
+                Expression<Func<T, TResult>> selector,
+                CancellationToken token = default)
+        {
+            return await GetForUpdateQueryable
+                .Where(predicate)
+                .Select(selector)
+                .FirstOrDefaultAsync(token);
+        }
+
+
+
+        public IQueryable<T> getQueryable<T>()
+        {
+            return (IQueryable<T>)GetQueryable;
         }
     }
 }

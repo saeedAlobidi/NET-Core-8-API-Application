@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CRM.Infrastructure.Migrations
 {
     [DbContext(typeof(CRMManagementDbContext))]
-    [Migration("20240909070317_InitialCreate2")]
-    partial class InitialCreate2
+    [Migration("20241003173239_InitialSchema2")]
+    partial class InitialSchema2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -52,6 +52,26 @@ namespace CRM.Infrastructure.Migrations
                     b.ToTable("Applications");
                 });
 
+            modelBuilder.Entity("CRM.Domain.Leads.Countries", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("CountryCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CountryCode")
+                        .IsUnique();
+
+                    b.ToTable("countries");
+                });
+
             modelBuilder.Entity("CRM.Domain.Leads.Lead", b =>
                 {
                     b.Property<int>("Id")
@@ -60,16 +80,132 @@ namespace CRM.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("age")
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("CountryId")
                         .HasColumnType("int");
 
-                    b.Property<string>("email")
+                    b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("linkedin")
+                    b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("LeadSourceId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Mobile")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("StatusId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Street")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ZipCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CountryId");
+
+                    b.HasIndex("LeadSourceId");
+
+                    b.HasIndex("StatusId");
+
+                    b.ToTable("Leads");
+                });
+
+            modelBuilder.Entity("CRM.Domain.Leads.LeadSource", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.HasKey("Id");
+
+                    b.ToTable("leadSources");
+                });
+
+            modelBuilder.Entity("CRM.Domain.Leads.LeadStatus", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.HasKey("Id");
+
+                    b.ToTable("leadStatuse");
+                });
+
+            modelBuilder.Entity("CRM.Domain.Leads.TranslatedCountries", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("LanguageCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("SourceId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SourceId");
+
+                    b.ToTable("translatedCountries");
+                });
+
+            modelBuilder.Entity("CRM.Domain.Leads.TranslatedLeadSource", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("LanguageCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("SourceId")
+                        .HasColumnType("int");
 
                     b.Property<string>("name")
                         .IsRequired()
@@ -77,7 +213,35 @@ namespace CRM.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Leads");
+                    b.HasIndex("SourceId");
+
+                    b.ToTable("translatedLeadSource");
+                });
+
+            modelBuilder.Entity("CRM.Domain.Leads.TranslatedLeadStatus", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("LanguageCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("SourceId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SourceId");
+
+                    b.ToTable("translatedLeadStatuses");
                 });
 
             modelBuilder.Entity("CRM.Domain.Services.Service", b =>
@@ -217,13 +381,13 @@ namespace CRM.Infrastructure.Migrations
                         {
                             Id = 1,
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "7b2abd71-7277-4a66-a748-78f9d3bbecc9",
+                            ConcurrencyStamp = "e10c984c-539d-4cc5-9359-ab13a6a210f5",
                             Email = "admin@example.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             Name = "Super admin",
                             NormalizedEmail = "ADMIN@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAELcpJ0WCYNj2tfYZHFCxSI9oGfzZCMPi6WcChUOZvzgk0GuSBBBYfCLMK9S1PcFZKw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAECxiF8T7rZOMHNx/tEp0sUIIDAjbeQIMuljigf6A5JEWm210YkUY9Ywf1UcYWxZ0ZQ==",
                             PhoneNumberConfirmed = false,
                             TwoFactorEnabled = false,
                             UserName = "admin@example.com"
@@ -417,6 +581,66 @@ namespace CRM.Infrastructure.Migrations
                     b.Navigation("service");
                 });
 
+            modelBuilder.Entity("CRM.Domain.Leads.Lead", b =>
+                {
+                    b.HasOne("CRM.Domain.Leads.Countries", "Country")
+                        .WithMany()
+                        .HasForeignKey("CountryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CRM.Domain.Leads.LeadSource", "LeadSource")
+                        .WithMany()
+                        .HasForeignKey("LeadSourceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CRM.Domain.Leads.LeadStatus", "Status")
+                        .WithMany()
+                        .HasForeignKey("StatusId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Country");
+
+                    b.Navigation("LeadSource");
+
+                    b.Navigation("Status");
+                });
+
+            modelBuilder.Entity("CRM.Domain.Leads.TranslatedCountries", b =>
+                {
+                    b.HasOne("CRM.Domain.Leads.Countries", "Source")
+                        .WithMany("Translations")
+                        .HasForeignKey("SourceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Source");
+                });
+
+            modelBuilder.Entity("CRM.Domain.Leads.TranslatedLeadSource", b =>
+                {
+                    b.HasOne("CRM.Domain.Leads.LeadSource", "Source")
+                        .WithMany("Translations")
+                        .HasForeignKey("SourceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Source");
+                });
+
+            modelBuilder.Entity("CRM.Domain.Leads.TranslatedLeadStatus", b =>
+                {
+                    b.HasOne("CRM.Domain.Leads.LeadStatus", "Source")
+                        .WithMany("Translations")
+                        .HasForeignKey("SourceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Source");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
                 {
                     b.HasOne("CRM.Infrastructure.DTOs.SystemRole", null)
@@ -466,6 +690,21 @@ namespace CRM.Infrastructure.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("CRM.Domain.Leads.Countries", b =>
+                {
+                    b.Navigation("Translations");
+                });
+
+            modelBuilder.Entity("CRM.Domain.Leads.LeadSource", b =>
+                {
+                    b.Navigation("Translations");
+                });
+
+            modelBuilder.Entity("CRM.Domain.Leads.LeadStatus", b =>
+                {
+                    b.Navigation("Translations");
                 });
 #pragma warning restore 612, 618
         }
